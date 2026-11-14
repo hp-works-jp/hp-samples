@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>つなぐ｜月末の締め作業を5日から2日に｜経費・請求の自動化クラウド（見本）</title>
+<meta name="description" content="経費精算・請求書・承認フローをまとめて自動化するクラウドサービス（架空）。導入効果シミュレーターで、削減できる時間とコストがわかります。資料請求は無料。※本ページはホームページ制作の見本です。">
+<meta name="robots" content="noindex,nofollow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="つなぐ｜月末の締め作業を5日から2日に">
+<meta property="og:description" content="導入効果シミュレーターと、無料の資料請求。">
+<meta property="og:image" content="images/b1.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#2457ff">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="core.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"見本クラウド株式会社（架空）","description":"業務自動化クラウド「つなぐ」を提供する企業（ホームページ制作の見本・架空）","telephone":"000-0000-0000","address":{"@type":"PostalAddress","addressCountry":"JP","addressRegion":"東京都","streetAddress":"○○区1-2-3 見本タワー12F（ダミー）"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"導入までに、どのくらいかかりますか？","acceptedAnswer":{"@type":"Answer","text":"最短2週間です。連携するシステムの数により、2〜6週間が目安です。"}},
+{"@type":"Question","name":"既存の会計システムと連携できますか？","acceptedAnswer":{"@type":"Answer","text":"主要な会計・給与システムと連携できます。対応状況は、資料に一覧があります。"}},
+{"@type":"Question","name":"セキュリティは大丈夫ですか？","acceptedAnswer":{"@type":"Answer","text":"通信・保管データの暗号化、権限管理、操作ログを標準で備えています。"}},
+{"@type":"Question","name":"無料で試せますか？","acceptedAnswer":{"@type":"Answer","text":"14日間のトライアルをご用意しています。"}}]}
+</script>
+<style>
+:root{--ink:#0e1a2b;--blue:#2457ff;--blue-d:#1a3fc4;--teal:#00a99d;--sky:#eef3ff;--mute:#586b82;--line:#dfe6f2;--mk:#cfe0ff;--acc:#2457ff}
+body{font-family:"Noto Sans JP","Hiragino Sans","Yu Gothic",sans-serif;background:#fff;color:var(--ink);font-size:16.5px;padding-bottom:80px}
+h1,h2,h3,b{font-weight:900}
+.btn{border-radius:10px;font-weight:900}.btn.bl{background:var(--blue);color:#fff;box-shadow:0 8px 20px rgba(36,87,255,.28)}.btn.bl:hover{background:var(--blue-d)}
+.btn.wl{background:#fff;color:var(--blue);box-shadow:inset 0 0 0 2px var(--blue)}
+.hdr{position:sticky;top:0;z-index:90;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;height:56px;max-width:1180px}
+.logo{font-weight:900;font-size:1.3rem;display:flex;align-items:center;gap:8px;color:var(--ink)}.logo::before{content:"";width:22px;height:22px;border-radius:50%;background:conic-gradient(var(--blue) 0 50%,var(--teal) 0)}
+.hr{display:flex;align-items:center;gap:8px}.hr .btn{padding:.55em 1.1em;font-size:.92rem;box-shadow:none}
+.nav{display:none;gap:22px;font-weight:700;font-size:.95rem;margin-right:12px}@media(min-width:960px){.nav{display:flex}}
+.mb{width:42px;height:42px;border:0;background:none;cursor:pointer;display:grid;place-items:center}@media(min-width:960px){.mb{display:none}}.mb i,.mb i::before,.mb i::after{display:block;width:22px;height:2.5px;background:var(--ink);border-radius:2px;content:"";position:relative}.mb i::before{position:absolute;top:-7px}.mb i::after{position:absolute;top:7px}
+.menu{position:fixed;inset:56px 0 0;z-index:85;background:#fff;padding:12px 24px;display:none;overflow:auto}.menu.on{display:block;animation:in .3s}@keyframes in{from{opacity:0}}
+.menu a{display:flex;justify-content:space-between;padding:18px 0;border-bottom:1px solid var(--line);font-weight:900;font-size:1.05rem}.menu a::after{content:"→";color:var(--blue)}
+/* 最初の画面 */
+.hero{background:linear-gradient(180deg,var(--sky),#fff);overflow:hidden}
+.hero .in{max-width:1180px;margin:0 auto;padding:26px 20px 12px;display:grid;gap:18px}@media(min-width:960px){.hero .in{grid-template-columns:1.1fr .9fr;align-items:center;padding:56px 20px 40px;gap:40px}}
+.eyebrow{display:inline-block;background:var(--blue);color:#fff;font-weight:900;font-size:.88rem;padding:3px 14px;border-radius:30px;margin-bottom:10px}
+.hero h1{font-size:clamp(1.7rem,6.8vw,3rem);line-height:1.45}
+.cnt{display:flex;align-items:baseline;gap:4px;margin:.12em 0 .2em;white-space:nowrap}
+.cnt b{font-size:clamp(4.6rem,22vw,8rem);line-height:.95;font-weight:900;letter-spacing:-.04em}
+.cnt .a{color:#9aa8bf;transition:color .8s}.cnt .a.done{text-decoration:line-through;text-decoration-thickness:6px}
+.cnt i{font-style:normal;font-size:clamp(1.4rem,6vw,2.3rem);font-weight:900}.cnt u{text-decoration:none;font-size:clamp(2rem,8vw,3.2rem);color:var(--teal);margin:0 4px;opacity:0;transition:opacity .6s}.cnt u.on{opacity:1}
+.cnt .b{color:var(--blue);opacity:0;transition:opacity .6s}.cnt .b.on{opacity:1}
+.bars{display:grid;gap:8px;margin:6px 0 4px}.bw{display:grid;grid-template-columns:54px 1fr;gap:10px;align-items:center;font-size:.9rem;color:var(--mute);font-weight:700}
+.tr{height:24px;background:#e6ecf7;border-radius:12px;overflow:hidden}.tr i{display:block;height:100%;border-radius:12px;width:0;transition:width 1.6s var(--ease)}.tr.b i{background:#9aa8bf}.tr.a i{background:linear-gradient(90deg,var(--blue),var(--teal));transition-delay:1s}
+.hero.on .tr.b i{width:100%}.hero.on .tr.a i{width:40%}
+.ph{border-radius:24px;overflow:hidden;aspect-ratio:16/10;position:relative;box-shadow:0 24px 50px rgba(14,26,43,.18)}.ph img{width:100%;height:100%;object-fit:cover}
+.ph .fl{position:absolute;left:12px;bottom:12px;background:#fff;border-radius:14px;padding:8px 14px;font-size:.88rem;box-shadow:0 8px 20px rgba(0,0,0,.15)}.ph .fl b{display:block;font-size:1.3rem;color:var(--blue)}
+.big{padding:8px 16px 6px;max-width:640px;margin:0 auto;display:grid;gap:10px}.big .btn{width:100%;font-size:1.15rem;padding:1.05em}.big .btn small{opacity:.9}
+@media(min-width:960px){.hero .big{margin:0;padding:0;max-width:none;grid-auto-flow:column}}
+.pts{display:flex;gap:4px 16px;flex-wrap:wrap;padding:8px 20px 20px;max-width:1180px;margin:0 auto;font-size:.95rem;color:var(--mute);font-weight:700}.pts span::before{content:"✓ ";color:var(--teal);font-weight:900}
+section.s{padding:60px 0}@media(min-width:900px){section.s{padding:92px 0}}
+.w{max-width:1000px;margin:0 auto;padding:0 20px}
+.eh{margin-bottom:26px}.eh small{display:block;color:var(--blue);font-weight:900;letter-spacing:.16em;font-size:.82rem}.eh h2{font-size:clamp(1.6rem,6vw,2.5rem);line-height:1.45}.eh p{color:var(--mute);margin-top:6px;max-width:34em;font-weight:400}
+.sk{background:var(--sky)}
+/* 課題 → 解決 */
+.pr{display:grid;gap:6px;padding:22px 0;border-bottom:1px solid var(--line)}@media(min-width:760px){.pr{grid-template-columns:1fr 50px 1.1fr;gap:20px;align-items:center}}
+.pr .x{color:#c14b52;font-weight:900;font-size:.92rem}.pr .x b{display:block;font-size:1.2rem;color:var(--ink)}.pr .ar{color:var(--blue);font-size:1.6rem;font-weight:900}@media(max-width:759px){.pr .ar{transform:rotate(90deg);width:fit-content}}
+.pr .o{color:#007a70;font-weight:900;font-size:.92rem}.pr .o b{display:block;font-size:1.2rem;color:var(--ink)}.pr p{color:var(--mute);font-size:1rem;font-weight:400}
+/* 機能 */
+.fe{display:grid;gap:20px;align-items:center;padding:30px 0;border-top:1px solid var(--line)}@media(min-width:760px){.fe{grid-template-columns:1fr 1fr;gap:44px}.fe:nth-of-type(even) .scr{order:-1}}
+.fe h3{font-size:1.3rem;margin-bottom:6px}.fe p{color:var(--mute);font-weight:400}.fe ul{margin:8px 0 0 1.2em;color:var(--ink);font-weight:500}
+.scr{background:#fff;border-radius:18px;padding:18px;box-shadow:0 18px 44px rgba(14,26,43,.14)}
+.ln{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--line);font-size:.95rem}.ln b{color:var(--teal)}.ln b.bad{color:#c14b52}
+.scr .mt{height:9px;background:#eef1f7;border-radius:9px;overflow:hidden;margin-top:10px}.scr .mt i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--blue),var(--teal));border-radius:9px;transition:width 1.6s var(--ease)}.scr.on .mt i{width:var(--w)}.scr small{font-size:.86rem;color:var(--mute)}
+/* 試算 */
+.tg{display:grid;gap:26px}@media(min-width:760px){.tg{grid-template-columns:1fr 1fr;gap:44px;align-items:center}}
+.fld{margin-bottom:22px}.fld label{display:flex;justify-content:space-between;font-weight:900;margin-bottom:6px;gap:10px}.fld label b{color:var(--blue);font-size:1.3rem;white-space:nowrap}
+input[type=range]{width:100%;accent-color:var(--blue);height:36px}
+select{font-family:inherit;padding:12px 14px;border-radius:10px;border:0;background:#fff;font-size:1rem;width:100%;min-height:48px}
+.out{background:var(--ink);color:#fff;border-radius:22px;padding:24px}.out small{color:#9fb2cc;font-size:.9rem}
+.out .bg2{font-size:clamp(2.6rem,10vw,3.8rem);font-weight:900;color:#5ff0e7;line-height:1.15}
+.out .kv{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0}.out .kv b{display:block;font-size:1.2rem}.out .nt{font-size:.84rem;color:#9fb2cc}
+/* 事例 */
+.cr{display:grid;gap:2px;padding:22px 0;border-bottom:1px solid var(--line)}@media(min-width:760px){.cr{grid-template-columns:1.1fr 1.3fr 1fr;gap:30px;align-items:center}}
+.cr small{color:var(--mute);display:block;font-size:.92rem}.cr .n{font-size:clamp(1.8rem,6.4vw,2.7rem);line-height:1.25;color:var(--blue)}.cr p{color:var(--mute);font-weight:400}.cr em{font-style:normal;background:var(--mk);color:var(--blue-d);border-radius:30px;padding:1px 14px;font-size:.86rem;margin-top:4px;display:inline-block;font-weight:900}
+/* 導入 料金 */
+.tl{display:grid;gap:0;counter-reset:s;margin-bottom:34px}@media(min-width:760px){.tl{grid-template-columns:repeat(4,1fr)}}
+.tl>div{padding:6px 14px 20px 58px;position:relative}@media(min-width:760px){.tl>div{padding:58px 12px 0 0}}
+.tl>div::before{counter-increment:s;content:counter(s);position:absolute;left:0;top:4px;width:42px;height:42px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-weight:900}
+.tl b{display:block;font-size:1.05rem}.tl p{color:var(--mute);font-size:.95rem;font-weight:400}.tl em{display:inline-block;margin-top:4px;font-style:normal;background:var(--mk);color:var(--blue-d);font-weight:900;padding:1px 12px;border-radius:30px;font-size:.86rem}
+.pl{display:flex;align-items:baseline;gap:14px;padding:20px 0;border-bottom:1px solid var(--line)}.pl h3{font-size:1.15rem}.pl p{color:var(--mute);font-size:.92rem;font-weight:400}.pl .p{margin-left:auto;font-size:1.6rem;font-weight:900;color:var(--blue);white-space:nowrap}
+.pl.hot{background:linear-gradient(90deg,var(--sky),#fff);margin:0 -12px;padding:20px 12px;border-radius:14px;border-bottom:0}.tag{background:var(--blue);color:#fff;font-size:.78rem;padding:1px 10px;border-radius:30px;margin-left:8px;vertical-align:middle}
+.faq{border-top:1px solid var(--line);max-width:760px}.q{border-bottom:1px solid var(--line)}.q button{font-size:1.05rem;padding:20px 0}.q button::after{color:var(--blue)}.q .a{color:var(--mute);font-weight:400}
+.rc{display:grid;gap:22px}@media(min-width:760px){.rc{grid-template-columns:repeat(3,1fr);gap:36px}}.rc h3{margin-bottom:6px;background:linear-gradient(transparent 64%,var(--mk) 64%);width:fit-content}.rc ul{list-style:none}.rc li{color:var(--mute);padding:5px 0;font-weight:400}
+.rflow{display:flex;gap:6px;flex-wrap:wrap;margin:22px 0;align-items:center;font-size:.95rem}.rflow span{background:var(--sky);padding:5px 16px;border-radius:30px;font-weight:700}.rflow i{color:var(--blue);font-style:normal}
+.hrow{display:flex;justify-content:space-between;gap:10px;padding:11px 0;border-bottom:1px dotted var(--mute);max-width:520px}
+.news{list-style:none;max-width:700px}.news li{display:grid;grid-template-columns:auto 1fr;gap:2px 14px;padding:14px 0;border-bottom:1px solid var(--line)}.news time{color:var(--blue);font-weight:900;white-space:nowrap}.news small{grid-column:2;color:var(--mute);font-weight:400;font-size:.95rem}
+.sub{font-size:1.2rem;margin:0 0 8px}
+.end{background:var(--blue);color:#fff;text-align:center;padding:60px 20px}.end h2{font-size:clamp(1.6rem,6.4vw,2.6rem);line-height:1.5;margin-bottom:6px}.end p{opacity:.92;margin-bottom:20px;font-weight:400}.end .big{padding:0;margin:0 auto}.end .btn{background:#fff;color:var(--blue);box-shadow:none}
+footer{background:#0a1220;color:#9fb2cc;padding:26px 20px 100px;font-size:.82rem;line-height:1.9;text-align:center}
+.bar{background:#fff;border-top:1px solid var(--line)}.bar .btn{box-shadow:none}
+@media(min-width:900px){body{padding-bottom:0}}
+</style>
+</head>
+<body>
+<header class="hdr"><div class="wrap"><a class="logo" href="#top">つなぐ</a><div class="hr"><nav class="nav"><a href="#kadai">課題と解決</a><a href="#kino">機能</a><a href="#shisan">効果の試算</a><a href="#jirei">導入事例</a><a href="#ryokin">料金</a></nav><a class="btn bl" data-bind="contact" href="#">資料請求</a><button class="mb" id="mb" aria-label="メニュー"><i></i></button></div></div></header>
+<nav class="menu" id="menu"><a href="#kadai">課題と解決</a><a href="#kino">できること</a><a href="#shisan">自社の効果を試算</a><a href="#jirei">導入事例</a><a href="#ryokin">導入の流れと料金</a><a href="#faq">よくあるご質問</a><a href="#saiyo">採用</a><a href="#kaisha">会社情報</a></nav>
+
+<main id="top">
+<div class="hero" id="hero"><div class="in"><div><span class="eyebrow">経費・請求・承認をまとめて自動化</span><h1>月末の締め作業が</h1>
+  <div class="cnt" aria-label="5日から2日に"><b class="a" id="na">5</b><i>日</i><u id="ar">→</u><b class="b" id="nb">2</b><i class="b" id="nd" style="opacity:0">日</i></div>
+  <div class="bars" aria-hidden="true"><div class="bw"><span>導入前</span><div class="tr b"><i></i></div></div><div class="bw"><span>導入後</span><div class="tr a"><i></i></div></div></div>
+  <div class="big" style="margin-top:18px"><a class="btn bl" data-bind="contact" href="#"><span>資料を請求する（無料）<small>3分で読める事例つき</small></span></a><a class="btn wl" href="#shisan">自社の効果を試算する</a></div></div>
+  <div class="ph"><img src="images/b1.jpg" alt="オフィスで話し合う人たち" fetchpriority="high"><div class="fl">月あたりの削減<b>96時間</b>製造業A社（従業員120名）</div></div></div>
+  <div class="pts"><span>導入企業 820社※</span><span>最短2週間で導入</span><span>14日間の無料トライアル</span><span style="font-weight:400">※ 見本の架空の数字です</span></div></div>
+
+<section class="s" id="kadai"><div class="w"><div class="eh"><small>PROBLEM &amp; SOLUTION</small><h2>こんなムダを<br>なくします</h2><p>現場でよく聞く3つのお悩みと解決のしかたです</p></div>
+  <div style="border-top:2px solid var(--ink)"><div class="pr"><div class="x">課題 1<b>経費精算の差し戻しが多い</b></div><div class="ar">→</div><div class="o">解決<b>入力した時点で自動チェック</b><p>ルール違反は申請前に気づけます</p></div></div><div class="pr"><div class="x">課題 2<b>請求書がバラバラで集計が大変</b></div><div class="ar">→</div><div class="o">解決<b>1か所に集めて自動で突合</b><p>メール PDF 紙を取り込みから照合まで自動で</p></div></div><div class="pr"><div class="x">課題 3<b>承認が止まって締めが遅れる</b></div><div class="ar">→</div><div class="o">解決<b>止まっている場所を見える化</b><p>期限が近いものは自動で催促します</p></div></div></div></div></section>
+
+<section class="s sk" id="kino"><div class="w"><div class="eh"><small>FEATURES</small><h2>できること</h2></div>
+  <div class="fe"><div><h3>経費精算 スマホで撮って終わり</h3><p>レシートを撮影するだけで金額 日付 科目を自動入力 ルール違反はその場で通知します</p><ul><li>交通系ICの利用履歴を取り込み</li><li>上限と規定の自動チェック</li><li>会計システムへ自動連携</li></ul></div><div class="scr"><div class="ln"><span>タクシー代（客先訪問）</span><b>¥3,240 ✓</b></div><div class="ln"><span>会議費（4名）</span><b>¥6,800 ✓</b></div><div class="ln"><span>接待交際費</span><b class="bad">規定超過</b></div><small>自動チェック完了率</small><div class="mt" style="--w:92%"><i></i></div></div></div>
+  <div class="fe"><div><h3>請求書 取り込みから突合まで自動</h3><p>メール PDF 紙のスキャンを1か所に集約 発注や入金の情報と自動で照合します</p><ul><li>PDFと画像から文字を自動読み取り</li><li>発注と入金との自動突合</li><li>支払期日のアラート</li></ul></div><div class="scr"><div class="ln"><span>請求書 No.2041</span><b>一致 ✓</b></div><div class="ln"><span>請求書 No.2042</span><b>一致 ✓</b></div><div class="ln"><span>請求書 No.2043</span><b class="bad">差異あり</b></div><small>自動突合率</small><div class="mt" style="--w:86%"><i></i></div></div></div>
+  <div class="fe"><div><h3>承認 どこで止まっているかがわかる</h3><p>どの申請が誰の手元で止まっているかを一覧表示 期限が近いものは自動で催促します</p><ul><li>部署と金額ごとのフロー設定</li><li>代理承認と不在時の自動転送</li><li>承認の履歴をすべて記録</li></ul></div><div class="scr"><div class="ln"><span>経費申請（営業部）</span><b>承認待ち 1日</b></div><div class="ln"><span>発注申請（製造部）</span><b>承認済み ✓</b></div><div class="ln"><span>契約申請（総務部）</span><b class="bad">催促済み</b></div><small>平均の承認時間（導入前比）</small><div class="mt" style="--w:38%"><i></i></div></div></div></div></section>
+
+<section class="s" id="shisan"><div class="w"><div class="eh"><small>SIMULATION</small><h2>自社なら<br>どれだけ減るか</h2><p>動かすだけで 削減できる時間とコストの目安が出ます</p></div>
+  <div class="tg"><div><div class="fld"><label for="r1">従業員数 <b id="v1">80名</b></label><input id="r1" type="range" min="10" max="500" step="10" value="80"></div><div class="fld"><label for="r2">1人あたりの月の事務作業 <b id="v2">6時間</b></label><input id="r2" type="range" min="1" max="20" step="1" value="6"></div><div class="fld"><label for="r3">1時間あたりの人件費</label><select id="r3"><option value="2500">2,500円（目安）</option><option value="3000" selected>3,000円</option><option value="4000">4,000円</option><option value="5000">5,000円</option></select></div></div>
+  <div class="out"><small>月あたりの削減</small><div class="bg2" id="o1">0時間</div><div class="kv"><div><small>削減できる人件費（年）</small><b id="o2">0円</b></div><div><small>ツール費用（年）</small><b id="o3">0円</b></div><div><small>差し引きの効果（年）</small><b id="o4" style="color:#5ff0e7">0円</b></div><div><small>投資の回収目安</small><b id="o5">—</b></div></div><p class="nt">※ 削減率は平均42%（架空の数字）で計算した目安です</p></div></div>
+  <div class="big" style="margin-top:26px"><a class="btn bl" data-bind="contact" href="#">この試算で資料を請求する</a></div></div></section>
+
+<section class="s sk" id="jirei"><div class="w"><div class="eh"><small>CASES</small><h2>導入事例</h2><p>※見本の架空の事例です 実際の制作ではお客様の許可を得た事例を数字つきで掲載します</p></div><div style="border-top:2px solid var(--ink)" id="cg"></div></div></section>
+
+<section class="s" id="ryokin"><div class="w"><div class="eh"><small>FLOW &amp; PRICE</small><h2>導入までの流れと<br>料金の目安</h2></div>
+  <div class="tl"><div><b>資料請求と相談</b><p>課題をうかがい 合うプランをご提案</p><em>当日〜翌営業日</em></div><div><b>トライアル</b><p>14日間 実際の画面で操作を確認</p><em>14日間 無料</em></div><div><b>設定と連携</b><p>承認フローや会計システムとの連携</p><em>1〜4週間</em></div><div><b>運用開始</b><p>社内説明会と定着までのサポート</p><em>最短2週間で開始</em></div></div>
+  <p class="lead" style="color:var(--mute);margin-bottom:8px">税抜の目安です 人数と機能に応じてお見積りします</p><div id="pg"></div><div class="big" style="margin-top:24px"><a class="btn bl" data-bind="contact" href="#">お見積りを依頼する</a></div></div></section>
+
+<section class="s sk" id="faq"><div class="w"><div class="eh"><small>FAQ</small><h2>導入前の<br>よくあるご質問</h2></div>
+  <div class="faq"><div class="q"><button type="button">導入まで どのくらいかかりますか</button><div class="a"><p>最短2週間です 連携するシステムの数により2〜6週間が目安です</p></div></div><div class="q"><button type="button">既存の会計や給与システムと連携できますか</button><div class="a"><p>主要な会計と給与システムと連携できます 対応状況は資料に一覧があります</p></div></div><div class="q"><button type="button">セキュリティは大丈夫ですか</button><div class="a"><p>通信と保管データの暗号化 権限管理 操作ログを標準で備えています</p></div></div><div class="q"><button type="button">無料で試せますか</button><div class="a"><p>14日間のトライアルをご用意しています クレジットカードの登録は不要です</p></div></div><div class="q"><button type="button">社内に詳しい人がいなくても使えますか</button><div class="a"><p>操作説明会と専任担当のサポートがあります ITが得意でない方も問題ありません</p></div></div></div></div></section>
+
+<section class="s" id="saiyo"><div class="w"><div class="eh"><small>RECRUIT</small><h2>ムダをなくす仲間を<br>募集しています</h2><p>エンジニア カスタマーサクセス 営業 フルリモート可（※見本の募集内容）</p></div>
+  <div class="rc"><div><h3>求める人物像</h3><ul><li>お客様の業務を深く理解したい方</li><li>仕組みで解決する発想が好きな方</li><li>チームで仮説と検証を回せる方</li></ul></div><div><h3>社員の声</h3><ul><li>田中（エンジニア・4年目）「小さく作ってお客様と確かめる文化です」（架空）</li><li>佐藤（CS・2年目）「導入後の成果を数字で語れるのが嬉しい」（架空）</li></ul></div><div><h3>働き方</h3><ul><li>フルリモート可（月1回の集合日）</li><li>フレックスタイム制</li><li>書籍と学習費の補助</li></ul></div></div>
+  <div class="rflow"><span>エントリー</span><i>→</i><span>カジュアル面談</span><i>→</i><span>選考（2回）</span><i>→</i><span>内定</span></div><a class="btn wl" data-bind="contact" href="#" style="padding:1em 2em">採用について問い合わせる</a></div></section>
+
+<section class="s sk" id="kaisha"><div class="w" style="display:grid;gap:34px"><div><p class="sub">受付時間・所在地</p><div id="hours"></div><p id="addr" style="margin-top:12px"></p></div><div><p class="sub">お知らせ</p><ul class="news" id="news"></ul></div></div></section>
+
+<section class="end"><h2>まずは資料で<br>効果を確かめてください</h2><p>請求は無料 営業の電話は 希望された方のみです</p><div class="big"><a class="btn" data-bind="contact" href="#">資料を請求する（無料）</a></div></section>
+</main>
+<footer>© 見本クラウド株式会社（架空） ※ホームページ制作の見本です 会社名・サービス名・住所・電話番号・実績・数字はすべて架空です 写真 Wikimedia Commons（CC0）</footer>
+<div class="bar" id="bar"><a class="btn bl" data-bind="contact" href="#">資料請求（無料）</a><a class="btn wl" data-bind="tel" data-label="short" href="#">電話</a></div>
+
+<script src="content.js"></script>
+<script src="core.js"></script>
+<script>
+(function(){
+var C=Core,$=C.$,$$=C.$$,S=window.SITE,esc=C.esc;
+function cases(){var e=S.extra&&S.extra["事例"];return e&&e.length?e.map(function(r){return{c:r[0],n:r[1],t:r[2],p:r[3]}}):S.cases}
+function paint(){
+  C.bind(S);
+  $("#cg").innerHTML=cases().map(function(c){return '<div class="cr"><div><small>'+esc(c.c)+'</small><em>'+esc(c.p)+'</em></div><div class="n">'+esc(c.n)+'</div><p>'+esc(c.t)+'</p></div>'}).join("");
+  $("#pg").innerHTML=S.prices.map(function(p){var hot=/人気/.test(p.note);return '<div class="pl'+(hot?" hot":"")+'"><div><h3>'+esc(p.name)+(hot?'<span class="tag">'+esc(p.note)+'</span>':"")+'</h3><p>'+esc(p.time)+(!hot&&p.note?"　"+esc(p.note):"")+'</p></div><div class="p">'+C.money(p)+'</div></div>'}).join("");
+  $("#news").innerHTML=S.news.map(function(n){return '<li><time>'+esc(String(n.date).replace(/-/g,"."))+'</time><b>'+esc(n.title)+'</b><small>'+esc(n.body)+'</small></li>'}).join("");
+  $("#hours").innerHTML=S.hours.map(function(h){return '<div class="hrow"><span>'+esc(h.day)+'</span><b>'+esc(h.time)+'</b></div>'}).join("");
+  $("#addr").innerHTML=esc(S.address)+"<br>"+esc(S.access);
+  C.jp(document.body)}
+paint();C.sheet(S,paint);
+$$(".q").forEach(function(q){var b=$("button",q),a=$(".a",q);b.addEventListener("click",function(){var o=q.classList.toggle("open");a.style.maxHeight=o?a.scrollHeight+"px":0})});
+$("#mb").addEventListener("click",function(){$("#menu").classList.toggle("on")});$$("#menu a").forEach(function(a){a.addEventListener("click",function(){$("#menu").classList.remove("on")})});
+/* 5日 → 2日：数字が実際に減り 棒が縮む */
+setTimeout(function(){$("#hero").classList.add("on")},300);
+setTimeout(function(){var st=Date.now(),from=5,to=2;$("#na").classList.add("done");$("#ar").classList.add("on");$("#nb").classList.add("on");$("#nd").style.opacity=1;$("#nd").classList.add("on");var iv=setInterval(function(){var p=Math.min((Date.now()-st)/1400,1),v=from+(to-from)*(1-Math.pow(1-p,3));$("#nb").textContent=(p<1?v.toFixed(1):String(to));if(p>=1)clearInterval(iv)},40)},1100);
+if("IntersectionObserver" in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("on");io.unobserve(e.target)}})},{threshold:.4});$$(".scr").forEach(function(s){io.observe(s)})}else $$(".scr").forEach(function(s){s.classList.add("on")});
+function calc(){var n=+$("#r1").value,h=+$("#r2").value,w=+$("#r3").value,rate=S.roi.rate;
+  $("#v1").textContent=n+"名";$("#v2").textContent=h+"時間";
+  var save=n*h*rate,year=save*12*w,cost=n*S.roi.monthlyPerPerson*12,net=year-cost;
+  $("#o1").textContent=Math.round(save).toLocaleString()+"時間";$("#o2").textContent=Math.round(year/1e4).toLocaleString()+"万円";$("#o3").textContent=Math.round(cost/1e4).toLocaleString()+"万円";
+  $("#o4").textContent=(net>=0?"+":"−")+Math.abs(Math.round(net/1e4)).toLocaleString()+"万円";
+  $("#o5").textContent=net>0?(Math.max(1,Math.ceil(cost/(year/12)))+"か月以内"):"要相談"}
+["r1","r2","r3"].forEach(function(id){$("#"+id).addEventListener("input",calc)});calc();
+C.init();
+})();
+</script>
+</body>
+</html>
