@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ご来院ありがとうございました｜やすらぎ整体院（見本）</title>
+<meta name="description" content="Googleの口コミ投稿のお願いページ（見本）。">
+<meta name="robots" content="noindex,nofollow">
+<style>
+:root{--a:#4a6a52;--ink:#3a332c;--mute:#7a7066}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN",sans-serif;color:var(--ink);background:linear-gradient(180deg,#4a6a52,#4a6a52 42%,#f8f3ea 42.1%);line-height:1.85;min-height:100vh;padding:34px 18px 60px;overflow-x:hidden}
+.box{max-width:520px;margin:0 auto;text-align:center}
+.heart{width:92px;height:92px;margin:0 auto 14px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff8,var(--a));display:grid;place-items:center;color:#fff;font-size:2.4rem;animation:hb 2.4s ease-in-out infinite}
+@keyframes hb{50%{transform:scale(1.12)}}
+h1{font-size:1.5rem;margin-bottom:10px;color:#fff;font-weight:600}p.s{color:#ffffffcc;margin-bottom:24px}
+.card{background:#fff;border:1px solid rgba(58,51,44,.2);border-radius:18px;padding:22px;text-align:left;margin-bottom:16px;box-shadow:0 14px 34px rgba(0,0,0,.14);color:var(--ink)}
+.card h2{font-size:1rem;margin-bottom:10px}.card li{margin:0 0 8px 1.2em}
+.btn{display:block;background:var(--a);color:#fff;text-decoration:none;font-weight:800;padding:18px;border-radius:60px;box-shadow:0 10px 24px rgba(0,0,0,.25);margin:22px 0 10px;animation:pl 2.6s infinite}
+@keyframes pl{70%{box-shadow:0 0 0 18px rgba(255,255,255,0)}100%{box-shadow:0 0 0 0 rgba(255,255,255,0)}}
+.hint span{display:inline-block;border:1px solid var(--a);color:var(--a);border-radius:30px;padding:3px 14px;margin:3px;font-size:.85rem}
+small{color:var(--mute);font-size:.76rem}
+.rv{opacity:0;transform:translateY(24px);animation:up .9s cubic-bezier(.2,.8,.2,1) forwards}.rv:nth-child(2){animation-delay:.15s}.rv:nth-child(3){animation-delay:.3s}.rv:nth-child(4){animation-delay:.45s}
+@keyframes up{to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="box">
+  <div class="heart rv">♡</div>
+  <h1 class="rv">ご来院ありがとうございました</h1>
+  <p class="s rv">今日の施術は いかがでしたか？<br>感想を聞かせていただけると 励みになります。</p>
+  <div class="card rv"><h2>書き方のヒント（自由にお書きください）</h2><div class="hint"><span>来院のきっかけ</span><span>施術の印象</span><span>通ってみての変化</span><span>スタッフの対応</span></div><p style="margin-top:10px"><small>一言だけでも とても励みになります。</small></p></div>
+  <div class="card rv"><h2>投稿の3ステップ</h2><ol><li>下のボタンを押す</li><li>Googleにログインして 星を選ぶ</li><li>感想を書いて「投稿」</li></ol></div>
+  <a class="btn" id="rv" href="#">Googleで口コミを書く</a>
+  <small style="display:block;color:#555">※ ご感想は 評価の高低にかかわらず どなたでもご自由に投稿いただけます。投稿は任意です。</small>
+</div>
+<script src="content.js"></script>
+<script>document.getElementById("rv").href=(window.SITE||{}).reviewUrl||"#";</script>
+</body>
+</html>
